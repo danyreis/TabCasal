@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="ascript.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+</head>
+<body>
+    <h1>Devs Rampa - Despesas de Casal</h1><!--Cris-->
+    <hr>
+    <div class="topo">
+        <img src="img/chianca.PNG" alt="Chianca Softwares" title="Chianca Softwares">
+    </div>
+    <hr>    
+        </div>
+        <br>
+                                
+                    <form class="principal">
+                        
+                        <label for="despesa">Despesas:</label><br><br>
+                        <input type="text" name="despesa" id="despesa" class="padrao" required>
+                        <br><br>
+                        <label for="despesa">Receita:</label><br><br>
+                        <input type="text" name="receita" id="receita" class="padrao" required><br><br>&nbsp;&nbsp;
+                        <input type="button" value="Enviar formulário" class="botao-enviar" onclick="adicionaPessoa(despesa.value, receita.value)">
+    
+                     </form>
+                     <br>
+                     <div id="Tabela">
+                         <table id="despesasCasal">
+                             <thead> <!--Título da Tabela-->
+                                 <tr><!--Linha da tabela-->
+                                     <td>ITEM</td> <!--coluna-->
+                                     <td>Conjugê 1</td>
+                                     <td>Conjugê 2</td>
+                                     <td>TOTAL</td>
+                                 </tr>
+                             </thead>
+                             <tbody>
+                                 <tr>
+                                    <td>Despesas Pagas</td>
+                                 </tr>
+                                 <tr>
+                                     <td>%Pago</td>
+                                 </tr>                                     
+                                <tr>
+                                    <td>Valor Devido</td>
+                                </tr>
+                                <tr>
+                                    <td>Saldo</td>
+                                </tr>
+                             </tbody>
+                         </table>
+                     </div>
+
+
+
+        </form>
+        
+    
+</body>
+    <footer>&copy; Cris</footer><!--Cris-->
+</html>
