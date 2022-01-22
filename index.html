@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="ascript.js"></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela</title>
 </head>
 <body>
-    <h1>Devs Rampa - Despesas de Casal</h1><!--Cris-->
+    <h1>Devs Rampa - Despesas de Casal</h1>
     <hr>
     <div class="topo">
         <img src="img/chianca.PNG" alt="Chianca Softwares" title="Chianca Softwares">
@@ -27,29 +27,46 @@
                         <input type="button" value="Enviar formulário" class="botao-enviar" onclick="adicionaPessoa(despesa.value, receita.value)">
     
                      </form>
-                     <br>
+                     <br><br>
                      <div id="Tabela">
-                         <table id="despesasCasal">
+                         <table id="despesasCasal" border="2">
                              <thead> <!--Título da Tabela-->
                                  <tr><!--Linha da tabela-->
                                      <td>ITEM</td> <!--coluna-->
-                                     <td>Conjugê 1</td>
-                                     <td>Conjugê 2</td>
+                                     <td>CÔNJUGE 1</td>
+                                     <td>CÔNJUGE 2</td>
                                      <td>TOTAL</td>
                                  </tr>
                              </thead>
-                             <tbody>
+                             <tbody id="CorpoTabela" border="1">
                                  <tr>
                                     <td>Despesas Pagas</td>
+                                    <td class="form-despPessoa1"></td>
+                                    <td class="form-despPessoa2"></td>
+                                    <td class="form-TotalDesp"></td>
+
+
                                  </tr>
                                  <tr>
                                      <td>%Pago</td>
-                                 </tr>                                     
+                                     <td class="form-PerctPessoa1"></td>
+                                     <td class="form-Perctessoa2"></td>
+                                     <td class="form-PerctTotal"></td>
+                               </tr>                                     
                                 <tr>
                                     <td>Valor Devido</td>
+                                    <td class="form-ValDev1"></td>
+                                    <td class="form-ValDev2"></td>
+                                    <td class="form-ValDevTotal"></td>
+
                                 </tr>
                                 <tr>
                                     <td>Saldo</td>
+                                    <td class="SaldoP1"></td>
+                                    <td class="SaldoP2"></td>
+                                    <td class="SaldoTotal"></td>
+
+
                                 </tr>
                              </tbody>
                          </table>
@@ -59,7 +76,7 @@
 
         </form>
         
-    
-</body>
-    <footer>&copy; Cris</footer><!--Cris-->
+        <script type="text/javascript" src="ascript.js"></script>
+</body><br><br>
+    <footer>&copy; Cris</footer>
 </html>
