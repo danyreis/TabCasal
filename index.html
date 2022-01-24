@@ -16,67 +16,61 @@
     <hr>    
         </div>
         <br>
-                                
                     <form class="principal">
                         
-                        <label for="despesa">Despesas:</label><br><br>
-                        <input type="text" name="despesa" id="despesa" class="padrao" required>
+                        <label for="despesa">Despesas Cônjuge 1:</label><br><br>
+                        <input type="text" name="despesa" style="width:160px;height:20px" id="despesa1" class="padrao" required>
                         <br><br>
-                        <label for="despesa">Receita:</label><br><br>
-                        <input type="text" name="receita" id="receita" class="padrao" required><br><br>&nbsp;&nbsp;
-                        <input type="button" value="Enviar formulário" class="botao-enviar" onclick="adicionaPessoa(despesa.value, receita.value)">
+                        <label for="despesa">Despesas Cônjuge 2:</label><br><br>
+                        <input type="text" name="receita" style="width:160px;height:20px" id="despesa2" class="padrao" required><br><br>
+                        <input type="button" value="Enviar formulário" style="width:160px;height:40px" class="botao-enviar" onclick="PreencherTabela(despesa1.value, despesa2.value)">;<!--Pega os valores de inputs do formulário-->
     
                      </form>
                      <br><br>
                      <div id="Tabela">
                          <table id="despesasCasal" border="2">
                              <thead> <!--Título da Tabela-->
-                                 <tr><!--Linha da tabela-->
-                                     <td>ITEM</td> <!--coluna-->
-                                     <td>CÔNJUGE 1</td>
-                                     <td>CÔNJUGE 2</td>
-                                     <td>TOTAL</td>
+                              
+                                 <tr id="Colunas"><!--Linha da tabela-->
+                                        <td class="Item"><b>ITEM</b></td> <!--coluna-->
+                                        <td class="Item"><b>CÔNJUGE 1</b></td>
+                                        <td class="Item"><b>CÔNJUGE 2</b></td>
+                                        <td class="Item"><b>TOTAL</b></td>
                                  </tr>
+                                
                              </thead>
-                             <tbody id="CorpoTabela" border="1">
-                                 <tr>
+                             <tbody id="CorpoTabela" border="2"><!--Destaca área da tabela onde os dados serão exibidos-->
+                                <div class="DespesasPag">
+                                <tr id="linhaDesp">
                                     <td>Despesas Pagas</td>
                                     <td class="form-despPessoa1"></td>
                                     <td class="form-despPessoa2"></td>
                                     <td class="form-TotalDesp"></td>
-
-
                                  </tr>
-                                 <tr>
+                                 <tr id="linhaPercent">
                                      <td>%Pago</td>
                                      <td class="form-PerctPessoa1"></td>
-                                     <td class="form-Perctessoa2"></td>
+                                     <td class="form-PerctPessoa2"></td>
                                      <td class="form-PerctTotal"></td>
                                </tr>                                     
-                                <tr>
+                                <tr id="linhaDevido">
                                     <td>Valor Devido</td>
                                     <td class="form-ValDev1"></td>
                                     <td class="form-ValDev2"></td>
                                     <td class="form-ValDevTotal"></td>
-
                                 </tr>
-                                <tr>
+                                <tr id="linhaSaldo">
                                     <td>Saldo</td>
                                     <td class="SaldoP1"></td>
                                     <td class="SaldoP2"></td>
                                     <td class="SaldoTotal"></td>
-
-
                                 </tr>
                              </tbody>
                          </table>
                      </div>
-
-
-
         </form>
         
-        <script type="text/javascript" src="ascript.js"></script>
+        <script type="text/javascript" src="script.js"></script>
 </body><br><br>
-    <footer>&copy; Cris</footer>
+    <b><footer>&copy; Cris</footer></b>
 </html>
