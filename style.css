@@ -12,17 +12,6 @@
     text-align: center;
 }
 
-/*.Tabela{
-    font: 14px Verdana;
-    margin-left: 35%;
-    margin-top: 150px;
-    
-}*
-.despesasCasal{
-    font: 14px Verdana;
-    margin-left: 25%;
-    display: inline-block;
-}*/
 table tr td{
     width: 140px;
 }
@@ -32,8 +21,9 @@ body {
     background: #F3F3F3;
     font-size: 14px;
     margin: 5%;
-    
+      
 }
+
 
 h1 {
     font-size: 30px;
@@ -53,3 +43,7 @@ footer{
     border-radius: 50px;
     border: 2px solid #E7E7E7;
     transition:all 0.3s;
+}
+.radio{
+    display: flex;
+}

@@ -1,5 +1,28 @@
-         
 function PreencherTabela(DespPag1, DespPag2, renda1, renda2){ //pega os inputs no HTML
+
+        if (DespPag1 == 'Limpar'){
+            var despPessoa1 = '';
+            var despPessoa2 = '';
+            var despTotal = '';
+            
+            var perctPessoa1 = '';
+            var perctPessoa1 = '';            
+            var perctPessoa2 = '';
+            var perctPessoa2 = '';        
+            var percTotal = '';
+
+            var valorDevidoConjuge1 = '';
+            var valorDevidoConjuge2 = '';
+            
+                  
+            var saldoPessoa1 = '';
+            var saldoPessoa2 = '';
+            for (x of document.getElementsByClassName('padrao')){//Limpar Campos
+                x.value = '';
+            }
+
+        }else{
+
         var casos = document.getElementsByName('conta'); //Pega os nomes no radius para analisar quando opção o usuário clicou
         if (casos[0].checked){ //checa o primeiro botão     
                       
@@ -46,26 +69,26 @@ function PreencherTabela(DespPag1, DespPag2, renda1, renda2){ //pega os inputs n
             var perctPessoa1 = Number((renda1 / rendaTotal)).toFixed(2)*100;
             var perctPessoa2 = Number((renda2 / rendaTotal)).toFixed(2)*100;
             var percTotal = Number(perctPessoa1) + Number(perctPessoa2);
-            var valorDevidoConjuge1 = (despTotal * perctPessoa1);
             
-            var valorDevidoConjuge2 = (despTotal * perctPessoa2);
+            var valorDevidoConjuge1 = (despTotal * (perctPessoa1 / 100));            
+            var valorDevidoConjuge2 = (despTotal * (perctPessoa2 / 100));
             //var valorDev = Number(valorDevidoConjuge1 + valorDevidoConjuge2);
             var saldoPessoa1 = parseFloat(despPessoa1 - valorDevidoConjuge1).toFixed(2);
             var saldoPessoa2 = parseFloat(despPessoa2 - valorDevidoConjuge2).toFixed(2); 
-
+        }
         }
             //Escrever na tabela usando o document.querySelector
         
-            document.querySelector(".form-despPessoa1").innerHTML =  despPessoa1; //Procura a classe despesa pessoa 1
-            document.querySelector(".form-despPessoa2").innerHTML = despPessoa2;
-            document.querySelector(".form-TotalDesp").innerHTML = despTotal;
-            document.querySelector(".form-PerctPessoa1").innerHTML = perctPessoa1;
-            document.querySelector(".form-PerctPessoa2").innerHTML =  perctPessoa2;
-            document.querySelector(".form-PerctTotal").innerHTML = percTotal;
-            document.querySelector(".form-ValDev1").innerHTML = valorDevidoConjuge1;
-            document.querySelector(".form-ValDev2").innerHTML = valorDevidoConjuge2;
-            document.querySelector(".form-ValDevTotal").innerHTML = despTotal;
-            document.querySelector(".SaldoP1").innerHTML = saldoPessoa1;
-            document.querySelector(".SaldoP2").innerHTML = saldoPessoa2;
-            document.querySelector(".SaldoTotal").innerHTML = 0;
+            document.querySelector(".form-despPessoa1").innerHTML = " R$ " + despPessoa1; //Procura a classe despesa pessoa 1
+            document.querySelector(".form-despPessoa2").innerHTML = " R$ " + despPessoa2;
+            document.querySelector(".form-TotalDesp").innerHTML = " R$ " + despTotal;
+            document.querySelector(".form-PerctPessoa1").innerHTML = perctPessoa1 + " %";
+            document.querySelector(".form-PerctPessoa2").innerHTML = perctPessoa2 + " %";
+            document.querySelector(".form-PerctTotal").innerHTML =  percTotal + " %";
+            document.querySelector(".form-ValDev1").innerHTML = " R$ " + valorDevidoConjuge1;
+            document.querySelector(".form-ValDev2").innerHTML = " R$ " + valorDevidoConjuge2;
+            document.querySelector(".form-ValDevTotal").innerHTML = " R$ " + despTotal;
+            document.querySelector(".SaldoP1").innerHTML = " R$ " + saldoPessoa1;
+            document.querySelector(".SaldoP2").innerHTML = " R$ " + saldoPessoa2;
+            document.querySelector(".SaldoTotal").innerHTML = " R$ " + 0;
         }

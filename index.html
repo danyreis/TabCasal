@@ -29,17 +29,18 @@
                         <label for="renda">Renda Cônjuge 2:</label><br><br>
                         <input type="text" name="renda2" style="width:160px;height:20px" id="renda2" class="padrao" required><br><br>
 
-
-                        <input type="radio" name="conta" value="Divisao1" id="Divisao">
-                        <label for="Divisao">Divisão</label><br><br>
-                        <input type="radio" name="conta" value="Porcent1" id="Porcent">
-                        <label for="Porcent">Porcentagem</label>
-                        <input type="radio" name="conta" value="Renda1" id="Renda">
-                        <label for="Renda">Renda</label><br><br>
-                        
+                        <div class="radio">
+                            <input type="radio" name="conta" value="Divisao1" id="Divisao">
+                            <label for="Divisao">Divisão</label><br><br>
+                            <input type="radio" name="conta" value="Porcent1" id="Porcent">
+                            <label for="Porcent">Porcentagem</label>
+                            <input type="radio" name="conta" value="Renda1" id="Renda">
+                            <label for="Renda">Renda</label><br><br>
+                        </div>   
                         
 
                         <input type="button" value="Enviar formulário" style="width:160px;height:40px" class="botao-enviar" onclick="PreencherTabela(despesa1.value, despesa2.value, renda1.value, renda2.value)"><!--Pega os valores de inputs do formulário-->
+                        <input type="button" value="Limpar" style="width:160px;height:40px" class="botao-enviar" onclick="PreencherTabela('Limpar')"><!--Pega os valores de inputs do formulário-->
                         
                                  
                      </form>
