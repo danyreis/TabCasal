@@ -8,14 +8,17 @@ function PreencherTabela(DespPag1, DespPag2, renda1, renda2){ //pega os inputs n
             var despTotal = (despPessoa1 + despPessoa2).toFixed(2);
             
             var perctPessoa1 = ((despPessoa1 / despTotal) * 100).toFixed(2);
-            perctPessoa1 = Number(perctPessoa1);            
+            var perctPessoa1 = Number(perctPessoa1);            
             var perctPessoa2 = ((despPessoa2 / despTotal) * 100).toFixed(2);
-            perctPessoa2 = Number(perctPessoa2);        
+            var perctPessoa2 = Number(perctPessoa2);        
             var percTotal = (perctPessoa1 + perctPessoa2).toFixed(2);
 
-            var valorDev = Number(despTotal / 2).toFixed(2);           
-            var saldoPessoa1 = (despPessoa1 - valorDev).toFixed(2)*100;
-            var saldoPessoa2 = (despPessoa2 - valorDev).toFixed(2)*100;
+            var valorDevidoConjuge1 = (despTotal / 2);
+            var valorDevidoConjuge2 = (despTotal / 2);
+            
+            //var valorDev = (despTotal / 2).toFixed(2);           
+            var saldoPessoa1 = (despPessoa1 - valorDevidoConjuge1).toFixed(2);
+            var saldoPessoa2 = (despPessoa2 - valorDevidoConjuge2).toFixed(2);
             
 
         } else if (casos[1].checked) {   //checa o segundo botão
@@ -27,10 +30,10 @@ function PreencherTabela(DespPag1, DespPag2, renda1, renda2){ //pega os inputs n
             var perctPessoa1 = 60;
             var perctPessoa2 = 40;
             var percTotal = perctPessoa1 + perctPessoa2;
-            var valorDevidoConjuge1 = despTotal * 0.60;
-            var valorDevidoConjuge2 = despTotal * 0.40;
-            var valorDev = Number(valorDevidoConjuge1 + valorDevidoConjuge2);
-            var saldoPessoa1 = ((despPessoa1) - (valorDevidoConjuge1)).toFixed(2);
+            var valorDevidoConjuge1 = Number(despTotal * 0.60).toFixed(2);
+            var valorDevidoConjuge2 = Number(despTotal * 0.40).toFixed(2);
+            //var valorDevTotal = (valorDevidoConjuge1 + valorDevidoConjuge2);
+            var saldoPessoa1 = Number((despPessoa1) - (valorDevidoConjuge1)).toFixed(2);
             var saldoPessoa2 = ((despPessoa2) - (valorDevidoConjuge2)).toFixed(2); 
         
         } else if (casos[2].checked){ //checa o terceiro botão
@@ -40,14 +43,15 @@ function PreencherTabela(DespPag1, DespPag2, renda1, renda2){ //pega os inputs n
             var despPessoa2 = Number(DespPag2);
             var despTotal = (despPessoa1 + despPessoa2).toFixed(2);
             
-            var perctPessoa1 = Number((renda1 / rendaTotal)).toFixed(2);
-            var perctPessoa2 = Number((renda2 / rendaTotal)).toFixed(2);
+            var perctPessoa1 = Number((renda1 / rendaTotal)).toFixed(2)*100;
+            var perctPessoa2 = Number((renda2 / rendaTotal)).toFixed(2)*100;
             var percTotal = Number(perctPessoa1) + Number(perctPessoa2);
             var valorDevidoConjuge1 = (despTotal * perctPessoa1);
+            
             var valorDevidoConjuge2 = (despTotal * perctPessoa2);
-            var valorDev = Number(valorDevidoConjuge1 + valorDevidoConjuge2);
-            var saldoPessoa1 = (despPessoa1 - valorDevidoConjuge1).toFixed(2);
-            var saldoPessoa2 = (despPessoa2 - valorDevidoConjuge2).toFixed(2); 
+            //var valorDev = Number(valorDevidoConjuge1 + valorDevidoConjuge2);
+            var saldoPessoa1 = parseFloat(despPessoa1 - valorDevidoConjuge1).toFixed(2);
+            var saldoPessoa2 = parseFloat(despPessoa2 - valorDevidoConjuge2).toFixed(2); 
 
         }
             //Escrever na tabela usando o document.querySelector
