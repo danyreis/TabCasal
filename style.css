@@ -1,13 +1,28 @@
-.Tabela{
+.Item{
+    background-color: rgb(144, 158, 151);
+    text-align: center;
+}
+#linhaSaldo, #linhaDevido, #linhaPercent, #linhaDesp{
+    text-align: center;
+}
+.DespesasPag{
+    text-align: center;
+}
+.topo{
+    text-align: center;
+}
+
+/*.Tabela{
     font: 14px Verdana;
     margin-left: 35%;
     margin-top: 150px;
     
-}
+}*
 .despesasCasal{
     font: 14px Verdana;
     margin-left: 25%;
-}
+    display: inline-block;
+}*/
 table tr td{
     width: 140px;
 }
@@ -16,20 +31,24 @@ body {
     font-family: 'Spline Sans', sans-serif;
     background: #F3F3F3;
     font-size: 14px;
-    padding top: 20px;
+    margin: 5%;
+    
 }
 
 h1 {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    background-color: rgb(144, 158, 151);;
+    border-radius: 15px;
+    border: 2px solid;
 }
 footer{
     text-align: center;
 }
 .botao-enviar:hover {
-    background-color: #F44336;
-    color: white;
+    background-color: rgb(144, 158, 151);
+    color: black;
     cursor: pointer;
     border-radius: 50px;
     border: 2px solid #E7E7E7;
