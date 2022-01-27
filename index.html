@@ -19,12 +19,29 @@
                     <form class="principal">
                         
                         <label for="despesa">Despesas Cônjuge 1:</label><br><br>
-                        <input type="text" name="despesa" style="width:160px;height:20px" id="despesa1" class="padrao" required>
+                        <input type="text" name="despesa1" style="width:160px;height:20px" id="despesa1" class="padrao" required>
                         <br><br>
                         <label for="despesa">Despesas Cônjuge 2:</label><br><br>
-                        <input type="text" name="receita" style="width:160px;height:20px" id="despesa2" class="padrao" required><br><br>
-                        <input type="button" value="Enviar formulário" style="width:160px;height:40px" class="botao-enviar" onclick="PreencherTabela(despesa1.value, despesa2.value)">;<!--Pega os valores de inputs do formulário-->
-    
+                        <input type="text" name="despesa2" style="width:160px;height:20px" id="despesa2" class="padrao" required><br><br>
+                        <label for="renda">Renda Cônjuge 1:</label><br><br>
+                        <input type="text" name="renda1" style="width:160px;height:20px" id="renda1" class="padrao" required>
+                        <br><br>
+                        <label for="renda">Renda Cônjuge 2:</label><br><br>
+                        <input type="text" name="renda2" style="width:160px;height:20px" id="renda2" class="padrao" required><br><br>
+
+
+                        <input type="radio" name="conta" value="Divisao1" id="Divisao">
+                        <label for="Divisao">Divisão</label><br><br>
+                        <input type="radio" name="conta" value="Porcent1" id="Porcent">
+                        <label for="Porcent">Porcentagem</label>
+                        <input type="radio" name="conta" value="Renda1" id="Renda">
+                        <label for="Renda">Renda</label><br><br>
+                        
+                        
+
+                        <input type="button" value="Enviar formulário" style="width:160px;height:40px" class="botao-enviar" onclick="PreencherTabela(despesa1.value, despesa2.value, renda1.value, renda2.value)"><!--Pega os valores de inputs do formulário-->
+                        
+                                 
                      </form>
                      <br><br>
                      <div id="Tabela">
@@ -68,6 +85,10 @@
                              </tbody>
                          </table>
                      </div>
+                     <br><br>
+
+                     
+                    </div>
         </form>
         
         <script type="text/javascript" src="script.js"></script>
